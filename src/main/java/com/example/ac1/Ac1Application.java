@@ -27,16 +27,16 @@ public class Ac1Application {
             filmeRepository.save(new Filme(null, "A Origem", 148, diretor1));
             filmeRepository.save(new Filme(null, "Barbie", 114, diretor2));
 
-            System.out.println("Filmes com duração maior que 120 minutos:");
+            System.out.println("[FILMES] Duração maior que 120 minutos:");
             filmeRepository.findByDuracaoGreaterThan(120).forEach(System.out::println);
 
-            System.out.println("Filmes com duração menor ou igual a 120 minutos:");
+            System.out.println("[FILMES] Duração menor ou igual a 120 minutos:");
             filmeRepository.findByDuracaoLessThanEqual(120).forEach(System.out::println);
 
-            System.out.println("Filmes cujo título começa com 'A':");
+            System.out.println("[FILMES] Título começando com 'A':");
             filmeRepository.findByTituloStartingWith("A").forEach(System.out::println);
 
-            System.out.println("Diretores cujo nome começa com 'G':");
+            System.out.println("[DIRETORES] Nome começando com 'G':");
             diretorRepository.findByNomeStartingWith("G").forEach(System.out::println);
         };
     }
